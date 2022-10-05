@@ -279,7 +279,7 @@ lc_loans = pd.read_csv(LC_LOANS_CSV)
 
 # Table 1-8(1)
 crosstab = lc_loans.pivot_table(index='grade', columns='status', 
-                                aggfunc=lambda x: len(x), margins=True)
+                                aggfunc=len, margins=True)
 print(crosstab)
 
 # Table 1-8(2)
